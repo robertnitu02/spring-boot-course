@@ -10,20 +10,15 @@ import java.util.List;
 @RequestMapping("api/software-engineers")
 public class SoftwareEngineerController {
 
+    private final SoftwareEngineerService softwareEngineerService;
+
+    public SoftwareEngineerController(SoftwareEngineerService softwareEngineerService) {
+        this.softwareEngineerService = softwareEngineerService;
+    }
+
     @GetMapping
     public List<SoftwareEngineer> getSoftwareEngineers() {
-        return List.of(
-                new SoftwareEngineer(
-                        1,
-                        "Robert",
-                        "angular, typescript"
-                ),
-                new SoftwareEngineer(
-                        2,
-                        "Alex",
-                        "C++/C#"
-                )
-        );
+        return softwareEngineerService.getAllSoftwareEngineers();
     }
 
 }
