@@ -1,8 +1,6 @@
 package com.example.demo.SoftwareEngineer;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +17,27 @@ public class SoftwareEngineerController {
     @GetMapping
     public List<SoftwareEngineer> getSoftwareEngineers() {
         return softwareEngineerService.getAllSoftwareEngineers();
+    }
+
+    @PostMapping
+    public void addNewSoftwareEngineer(@RequestBody SoftwareEngineer softwareEngineer) {
+        softwareEngineerService.insertSoftwareEngineer(softwareEngineer);
+    }
+
+    @GetMapping("{id}")
+    public SoftwareEngineer getEngineerById(@PathVariable Integer id) {
+        return softwareEngineerService.getSoftwareEngineerById(id);
+    }
+
+    @DeleteMapping("{id}")
+    public void deleteSoftwareEngineerById(@PathVariable Integer id) {
+        softwareEngineerService.deleteSoftwareEngineerById(id);
+    }
+
+    @PutMapping("{id}")
+    public void updateSoftwareEngineer(@PathVariable Integer id,
+                                       @RequestBody SoftwareEngineer softwareEngineer) {
+        softwareEngineerService.updateSoftwareEngineer(id, softwareEngineer);
     }
 
 }

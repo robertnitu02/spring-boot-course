@@ -1,5 +1,39 @@
 ### GET request to example server
 GET http://localhost:8080/
-
 ###
+
+### GET all software engineers
 GET http://localhost:8080/api/software-engineers
+###
+
+### Send POST request with json body
+POST http://localhost:8080/api/software-engineers
+Content-Type: application/json
+
+{
+  "name": "Robert",
+  "techStack": "angular, spring boot"
+}
+###
+
+### GET software engineer 1
+GET http://localhost:8080/api/software-engineers/1
+###
+
+### GET software engineer 2
+GET http://localhost:8080/api/software-engineers/2
+###
+
+### DELETE software engineer 1
+DELETE http://localhost:8080/api/software-engineers/1
+###
+
+### PUT update software engineer
+PUT http://localhost:8080/api/software-engineers/1
+Content-Type: application/json
+
+{
+  "name": "Robert Nitu",
+  "techStack": "none"
+}
+###

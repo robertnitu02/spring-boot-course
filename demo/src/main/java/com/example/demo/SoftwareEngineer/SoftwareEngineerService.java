@@ -17,4 +17,25 @@ public class SoftwareEngineerService {
         return softwareEngineerRepository.findAll();
     }
 
+    public void insertSoftwareEngineer(SoftwareEngineer softwareEngineer) {
+        softwareEngineerRepository.save(softwareEngineer);
+    }
+
+    public SoftwareEngineer getSoftwareEngineerById(Integer id) {
+        return softwareEngineerRepository.findById(id).orElseThrow(
+                () -> new IllegalStateException("SoftwareEngineer with id " + id + " not found")
+        );
+    }
+
+    public void deleteSoftwareEngineerById(Integer id) {
+        softwareEngineerRepository.deleteById(id);
+    }
+
+    public void updateSoftwareEngineer(Integer id, SoftwareEngineer softwareEngineerUpdated) {
+        SoftwareEngineer softwareEngineer = this.getSoftwareEngineerById(id);
+
+        softwareEngineer.setName(softwareEngineerUpdated.getName());
+        softwareEngineer.setTechStack(softwareEngineerUpdated.getTechStack());
+        softwareEngineerRepository.save(softwareEngineer);
+    }
 }
