@@ -1,5 +1,9 @@
 <div *ngFor="let employee of employees">
-  <div>{{ employee.id }}</div>
-  <div>{{ employee.name }}</div>
-  <div>{{ employee.imageUrl }}</div>
+  <div>#{{ employee.id }}, Nume: {{ employee.name }}, Avatar: {{ employee.imageUrl }}, JobTitle: {{ employee.jobTitle }}</div>
+</div>
+<br/>
+<br/>
+<div>
+  <button (click)="addNewEmployee()">Add</button>
+  <button (click)="removeLastEmployee()" [disabled]="employees.length === 0">RemoveLast</button>
 </div>
