@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
       email: "test@yahoo.com",
       jobTitle: "Somer 2",
       phone: "07amcartela",
-      imageUrl: "poza2",
+      imageUrl: "https://i.imgur.com/zVJcEhn.jpeg",
       employeeCode: "4324232"
     };
 
@@ -69,6 +69,10 @@ export class AppComponent implements OnInit {
           console.log(error);
         }
       });
+  }
+
+  public shouldButtonBlock(): boolean {
+    return this.employees.length === 0;
   }
 
   private setLastId(): void {
