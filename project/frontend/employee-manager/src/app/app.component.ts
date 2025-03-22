@@ -77,6 +77,4 @@ export class AppComponent implements OnInit {
     let length = this.employees.length;
     this.lastId = this.employees[length - 1].id;
   }
-
-  protected readonly JSON = JSON;
 }
