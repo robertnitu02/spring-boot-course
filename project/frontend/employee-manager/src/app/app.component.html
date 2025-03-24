@@ -1,5 +1,18 @@
-<div *ngFor="let employee of employees">
-  <div>{{ employee.id }}</div>
-  <div>{{ employee.name }}</div>
-  <div>{{ employee.imageUrl }}</div>
+<div class="app">
+  <div class="employees">
+    <div *ngFor="let employee of employees">
+      <div class="card" style="width: 18rem;">
+        <img src="{{employee.imageUrl}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">#{{ employee.id }}, Nume: {{ employee.name }}</h5>
+          <p class="card-text">{{ employee.jobTitle }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button type="button" class="btn btn-primary" (click)="addNewEmployee()">Add</button>
+    <button type="button" class="btn btn-danger" (click)="removeLastEmployee()" [disabled]="shouldButtonBlock()">RemoveLast</button>
+  </div>
 </div>

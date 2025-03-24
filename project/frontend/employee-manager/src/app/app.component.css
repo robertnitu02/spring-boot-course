@@ -1,0 +1,16 @@
+.app {
+  display: grid;
+  margin: 25px;
+}
+
+.employees {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
