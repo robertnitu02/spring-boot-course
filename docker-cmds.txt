@@ -1,0 +1,28 @@
+docker pull > pull images [always pull latest]
+docker pull redis:6.2 [a specific version]
+docker images > all images installed
+
+docker rmi <image>
+
+docker run -d (DETACHED) --name (CONTAINER NAME) -e (ENV) > docker run -e POSTGRES_PASSWORD=password postgres
+
+docker rm <container>
+
+docker start <ID>
+docker stop <ID>
+
+docker ps
+docker ps -a > all
+
+docker logs -f <NAME> > fully view
+
+docker exec -it <NAME> > interactive terminal
+
+
+docker run --name postgres-sql -p 5432:5432 -e POSTGRES_PASSWORD=password -v D:/spring-boot-course/docker/volumes/postgresql/data:/var/lib/postgres/data postgres
+
+> --name <NUME> --> Numele containerului
+> -p 5432:5432  --> 5432 din stanga reprezinta portul hostului / 5432 din dreapta reprezinta portul containerului
+> -e <NUME>      --> ENV.
+> -v PATH:PATH   --> creare volum cu locatia locala in stanga & locatia de pe container in dreapta
+> -d             --> detached mode
