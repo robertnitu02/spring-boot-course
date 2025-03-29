@@ -1,6 +1,6 @@
 services:
   postgres:
-    container_name: postgres-sql-authproj
+    container_name: postgres-sql-auth-project
     image: postgres
     environment:
       POSTGRES_USER: username
@@ -15,12 +15,11 @@ services:
       - spring-demo
     restart: unless-stopped
   mail-dev:
-    container_name: mail-dev-authproj
+    container_name: mail-dev-auth-project
     image: maildev/maildev
     ports:
       - 1080:1080
       - 1025:1025
-
 
 networks:
   spring-demo:
