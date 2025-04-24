@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router, RouterOutlet} from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,6 @@ import {Router, RouterOutlet} from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'auth-project';
 
   constructor(
     private route: Router
@@ -17,5 +16,9 @@ export class AppComponent {
 
   goToLogin() {
     this.route.navigate(['login']);
+  }
+
+  goToRegister() {
+    this.route.navigate(['register']);
   }
 }
