@@ -1,0 +1,32 @@
+{
+  "login-and-register": {
+    "register-now": "Înregistrează-te ACUM",
+    "register": "Înregistrează-te",
+    "sign-in": "Logheaza-te",
+    "password": "Parolă",
+    "first-name": "Nume",
+    "last-name": "Prenume",
+    "dont-have-account": "Nu ai un cont?",
+    "back-to-login": "Înapoi la Logare",
+    "type-activation-code": "Introdu codul de verificare",
+    "try-again": "Încearcă din nou",
+    "activate-successfully-title": "Activare cu succes!",
+    "activate-bad-title": "Activare întreruptă!",
+    "activate-successfully": "Contul tău a fost activat cu succes!\nAcum poți să mergi la pagina de Login",
+    "activate-bad": "Token-ul a expirat sau este invalid!"
+  },
+  "home-page": {
+    "first-paragraph": "AgroNOW este soluția digitală dedicată modernizării piețelor agroalimentare prin automatizarea și eficientizarea activităților comerciale. Platforma noastră conectează producătorii locali cu consumatorii printr-o interfață intuitivă și accesibilă. Cu AgroNOW, tradiția întâlnește inovația în timp real.",
+    "header-1": "🔗 Conectăm producătorii cu tehnologia",
+    "header-1-description": "Transformăm piețele agroalimentare prin digitalizare, facilitând vânzarea și gestionarea produselor.",
+    "header-2": "📊 Eficiență în timp real",
+    "header-2-description": "Monitorizare, gestiune și raportare automată pentru o administrare inteligentă a activităților zilnice.",
+    "header-3": "🌱 Tradiție și inovație",
+    "header-3-description": "Respectăm valorile locale, integrând soluții moderne adaptate nevoilor producătorilor și consumatorilor."
+  },
+  "navigation-bar": {
+    "home": "Acasă",
+    "shops": "Piețe",
+    "change-language": "Schimbă Limba"
+  }
+}

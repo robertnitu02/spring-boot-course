@@ -19,6 +19,13 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
         .activation-code {
             font-size: 36px;
             text-align: center;
@@ -41,6 +48,11 @@
 </head>
 <body>
     <div class="container">
+        <div class="center">
+            <img src="https://i.imgur.com/foH99ZV.png" style="width: 150px; height: 150px" alt="logo" />
+        </div>
+        <br/>
+        <br/>
         <h1>Account Activation</h1>
         <p class="greeting" th:text="'Hello ' + ${username} + ','"></p>
         <p>Thank you for signing up! Please use the following activation code to activate your account:</p>

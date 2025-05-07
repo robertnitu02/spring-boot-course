@@ -3,12 +3,14 @@ import {AuthenticationService} from '../../services/services/authentication.serv
 import { Router } from '@angular/router';
 import {NgIf} from '@angular/common';
 import {CodeInputModule} from 'angular-code-input';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-activate-account',
   imports: [
     NgIf,
-    CodeInputModule
+    CodeInputModule,
+    TranslatePipe
   ],
   templateUrl: './activate-account.component.html',
   styleUrl: './activate-account.component.scss'
@@ -39,12 +41,12 @@ export class ActivateAccountComponent {
       token
     }).subscribe({
       next: () => {
-        this.message = 'Your account has been successfully activated!\nNow you can proceed to Login';
+        this.message = 'login-and-register.activate-successfully';
         this.submitted = true;
         this.isOkay = true;
       },
       error: () => {
-        this.message = 'Token has been expired or invalid!';
+        this.message = 'login-and-register.activate-bad';
         this.submitted = true;
         this.isOkay = false;
       }

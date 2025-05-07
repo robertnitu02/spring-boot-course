@@ -5,6 +5,7 @@ import { RegistrationRequest } from '../../services/models/registration-request'
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../services/services/authentication.service';
 import { TokenService } from '../../services/token/token.service';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,8 @@ import { TokenService } from '../../services/token/token.service';
     NgForOf,
     NgIf,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TranslatePipe
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'

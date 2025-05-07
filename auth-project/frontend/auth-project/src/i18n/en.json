@@ -1,0 +1,32 @@
+{
+  "login-and-register": {
+    "register-now": "Register NOW",
+    "register": "Register",
+    "sign-in": "Sign In",
+    "password": "Password",
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "dont-have-account": "Don't have an account?",
+    "back-to-login": "Back to Login",
+    "type-activation-code": "Type your activation code",
+    "try-again": "Try Again",
+    "activate-successfully-title": "Activation Successful!",
+    "activate-bad-title": "Activation failed!",
+    "activate-successfully": "Your account has been successfully activated!\nNow you can proceed to Login",
+    "activate-bad": "Token has been expired or invalid!"
+  },
+  "home-page": {
+    "first-paragraph": "AgroNOW is the digital solution dedicated to modernizing agri-food markets by automating and streamlining commercial activities. Our platform connects local producers with consumers through an intuitive and accessible interface. With AgroNOW, tradition meets innovation in real time.",
+    "header-1": "🔗 Connecting Producers with Technology",
+    "header-1-description": "We transform agri-food markets through digitalization, making it easier to sell and manage products.",
+    "header-2": "📊 Real-Time Efficiency",
+    "header-2-description": "Automated monitoring, management, and reporting for smart administration of daily operations.",
+    "header-3": "🌱 Tradition and Innovation",
+    "header-3-description": "We honor local values by integrating modern solutions tailored to the needs of producers and consumers."  
+  },
+  "navigation-bar": {
+    "home": "Home",
+    "shops": "Shops",
+    "change-language": "Change Language"
+  }
+}

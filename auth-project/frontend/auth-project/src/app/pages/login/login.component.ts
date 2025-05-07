@@ -6,13 +6,15 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from '../../services/services/authentication.service';
 import { AuthenticationResponse } from '../../services/models/authentication-response';
 import { TokenService } from '../../services/token/token.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   imports: [
     NgIf,
     NgForOf,
-    FormsModule
+    FormsModule,
+    TranslatePipe
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'

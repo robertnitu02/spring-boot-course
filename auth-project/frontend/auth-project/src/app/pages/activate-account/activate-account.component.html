@@ -1,14 +1,14 @@
 <div *ngIf="submitted else codeForm" class="container">
   <div *ngIf="isOkay else activationError" class="activate-message">
-    <h2>Activation Successful!</h2>
-    <p>{{message}}</p>
-    <button class="btn btn-primary" (click)="goToLogin()">Go to Login</button>
+    <h2>{{ 'login-and-register.activate-successfully-title' | translate }}</h2>
+    <p>{{ message | translate }}</p>
+    <button class="btn btn-primary" (click)="goToLogin()">{{ 'login-and-register.sign-in' | translate }}</button>
   </div>
   <ng-template #activationError>
     <div class="activate-error">
-      <h2>Activation failed!</h2>
-      <p>{{ message }}</p>
-      <button class="btn btn-primary" (click)="submitted = false">Try Again</button>
+      <h2>{{ 'login-and-register.activate-bad-title' | translate }}</h2>
+      <p>{{ message | translate }}</p>
+      <button class="btn btn-primary" (click)="submitted = false">{{ 'login-and-register.try-again' | translate }}</button>
     </div>
   </ng-template>
 </div>
@@ -16,7 +16,7 @@
 <ng-template #codeForm>
   <div class="container">
     <div class="text-center" style="width: 400px;">
-      <h2>Type your activation code</h2>
+      <h2>{{ 'login-and-register.type-activation-code' | translate }}</h2>
       <code-input
         [isCodeHidden]="false"
         [codeLength]="6"
