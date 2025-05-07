@@ -52,6 +52,11 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
     this.route.navigate(['profile']);
   }
 
+  logOut() {
+    this.tokenService.reset();
+    console.log('Logout');
+  }
+
   changeLanguage() {
     const newValue = this.translate.getDefaultLang() === 'en' ? 'ro': 'en';
     this.translate.use(newValue);

@@ -28,5 +28,8 @@
     "home": "Acasă",
     "shops": "Piețe",
     "change-language": "Schimbă Limba"
+  },
+  "profile": {
+    "need-to-login-first": "Trebuie să te loghezi întâi!"
   }
 }

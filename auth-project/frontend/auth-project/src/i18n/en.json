@@ -28,5 +28,8 @@
     "home": "Home",
     "shops": "Shops",
     "change-language": "Change Language"
+  },
+  "profile": {
+    "need-to-login-first": "You need to login first!"
   }
 }
