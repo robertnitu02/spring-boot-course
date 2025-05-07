@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationRequest } from '../../services/models/registration-request';
-import {Router} from '@angular/router';
-import {AuthenticationService} from '../../services/services/authentication.service';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/services/authentication.service';
+import { TokenService } from '../../services/token/token.service';
 
 @Component({
   selector: 'app-register',
@@ -21,6 +22,7 @@ export class RegisterComponent {
   constructor(
     private router: Router,
     private authService: AuthenticationService,
+    private tokenService: TokenService
   ) {
   }
 
@@ -49,5 +51,9 @@ export class RegisterComponent {
 
   goToLogin() {
     this.router.navigate(['login']);
+  }
+
+  isAlreadyLoggedIn(): boolean {
+    return this.tokenService.isAlreadyLoggedIn();
   }
 }

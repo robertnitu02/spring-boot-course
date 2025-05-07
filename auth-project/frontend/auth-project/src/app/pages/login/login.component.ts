@@ -25,7 +25,7 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private authService: AuthenticationService,
-    private tokenService: TokenService,
+    public tokenService: TokenService,
   ) {
   }
 
@@ -38,6 +38,9 @@ export class LoginComponent {
         this.tokenService.token = res.token as string;
         // route
         console.log(res);
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, 1000);
       },
       error: (err) => {
         console.log(JSON.stringify(err));

@@ -1,0 +1,7 @@
+<div *ngIf="this.tokenService.isAlreadyLoggedIn() else needToLoginFirst" class="mb-lg-3">
+  <button type="button" class="btn btn-danger" (click)="logOut()">Log Out</button>
+</div>
+
+<ng-template #needToLoginFirst>
+  <h2>You need to login first!</h2>
+</ng-template>
