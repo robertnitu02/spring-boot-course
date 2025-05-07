@@ -9,6 +9,7 @@ import com.auth.authproj.user.TokenRepository;
 import com.auth.authproj.user.User;
 import com.auth.authproj.user.UserRepository;
 import jakarta.mail.MessagingException;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -130,5 +131,21 @@ public class AuthenticationService {
 
         savedToken.setValidatedAt(LocalDateTime.now());
         tokenRepository.save(savedToken);
+    }
+
+    public UserResponse getUserById(Integer id) {
+        return userRepository.findById(id)
+                .map(this::toUserResponse)
+                .orElseThrow(() -> new EntityNotFoundException("No user found with ID:: " + id));
+    }
+
+    private UserResponse toUserResponse(User user) {
+        return UserResponse.builder()
+                .id(user.getId())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
+                .enabled(user.isEnabled())
+                .build();
     }
 }
