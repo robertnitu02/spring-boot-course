@@ -5,6 +5,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ActivateAccountComponent } from './pages/activate-account/activate-account.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ShopsComponent } from './pages/shops/shops.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 export const routes: Routes = [
   {
@@ -26,6 +28,14 @@ export const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+  },
+  {
+    path: 'shops',
+    component: ShopsComponent,
+  },
+  {
+    path: 'shop',
+    component: ShopComponent,
   },
   {
     path: '',

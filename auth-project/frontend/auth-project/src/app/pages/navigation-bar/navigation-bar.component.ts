@@ -5,6 +5,13 @@ import { NgIf } from '@angular/common';
 import { Subscription } from 'rxjs';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 
+enum pages {
+  LOGIN,
+  HOME,
+  PROFILE,
+  SHOPS,
+}
+
 @Component({
   selector: 'app-navigation-bar',
   imports: [
@@ -18,6 +25,12 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
 
   isLogged = false;
   loginSub: Subscription | undefined;
+  pageRoutes: Record<pages, string> = {
+    [pages.HOME]: "home",
+    [pages.LOGIN]: "login",
+    [pages.PROFILE]: "profile",
+    [pages.SHOPS]: "shops"
+  };
 
   constructor(
     private route: Router,
@@ -40,16 +53,9 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
     this.loginSub.unsubscribe();
   }
 
-  goToLogin() {
-    this.route.navigate(['login']);
-  }
-
-  gotoHome() {
-    this.route.navigate(['home']);
-  }
-
-  goToProfile() {
-    this.route.navigate(['profile']);
+  goToPage(page: pages) {
+    let route = this.pageRoutes[page];
+    this.route.navigate([route]);
   }
 
   logOut() {
@@ -62,4 +68,6 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
     this.translate.use(newValue);
     this.translate.setDefaultLang(newValue);
   }
+
+  protected readonly pages = pages;
 }
